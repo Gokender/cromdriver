@@ -11,7 +11,7 @@ setuptools.setup(
     author_email='gauthier.chaty+pypi@outlook.com',
     description='Auto downloader for chromedrivers',
     long_description=long_description,
-    #long_description_content_type='text/markdown',
+    long_description_content_type='text/markdown',
     url='https://github.com/Gokender/cromdriver',
     packages=setuptools.find_packages(include=['cromdriver']),
     classifiers=[
