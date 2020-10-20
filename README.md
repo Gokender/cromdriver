@@ -1,2 +1,2 @@
 # cromdriver
-Auto downloader of chromedriver
+Auto downloader for chromedriver
