@@ -1,5 +1,4 @@
 import setuptools
-
 import cromdriver
 
 with open('README.md', 'r') as fh:
@@ -12,7 +11,7 @@ setuptools.setup(
     author_email='gauthier.chaty+pypi@outlook.com',
     description='Auto downloader for chromedrivers',
     long_description=long_description,
-    long_description_content_type='text/markdown',
+    #long_description_content_type='text/markdown',
     url='https://github.com/Gokender/cromdriver',
     packages=setuptools.find_packages(include=['cromdriver']),
     classifiers=[
@@ -23,4 +22,9 @@ setuptools.setup(
     install_requires=['requests', 'appdirs'],
     test_suite='tests',
     python_requires='>=3.6',
+    entry_points={
+        'console_scripts': [
+            'cromdriver=cromdriver.cli',
+        ],
+    }
 )
