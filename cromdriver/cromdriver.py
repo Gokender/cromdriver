@@ -5,7 +5,7 @@ import zipfile
 import io
 
 import requests
-from appdirs import *
+from appdirs import user_data_dir
 
 URL_CHROMEDRIVER = 'http://chromedriver.storage.googleapis.com/'
 APP_DATA = user_data_dir('cromdriver')
