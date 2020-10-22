@@ -79,6 +79,10 @@ def download_binary(url, target_location):
     if response.ok:
         z_file = zipfile.ZipFile(io.BytesIO(response.content))
         z_file.extractall(target_location)
+        if sys.platform.startswith('win'):
+            os.chmod(os.path.join(target_location, 'chromedriver.exe') , 0o755)
+        else:
+            os.chmod(os.path.join(target_location, 'chromedriver') , 0o755)
     else:
         print('Impossible to download zip from url : {}'.format(url))
 
